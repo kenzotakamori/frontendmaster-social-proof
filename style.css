@@ -40,7 +40,17 @@ body {
 .ratings .rating {
   background-color: #f7f2f7;
   border-radius: 10px;
+}
+.ratings .rating span {
   color: #502050;
+}
+.ratings .rating span::before {
+  content: "";
+  width: 100px;
+  height: 16px;
+  display: inline-block;
+  background-image: url("/images/icon-star.svg");
+  background-repeat: space;
 }
 
 .reviews {
@@ -53,6 +63,9 @@ body {
 .reviews .review {
   background-color: #502050;
   border-radius: 10px;
+}
+.reviews .review img {
+  border-radius: 50%;
 }
 .reviews .review h2 {
   color: white;

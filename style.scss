@@ -48,7 +48,17 @@ body {
     .rating {
         background-color: $light-gray-magenta;
         border-radius: 10px;
-        color: $very-dark-magenta;
+        span {
+            color: $very-dark-magenta;
+            &::before {
+                content: '';
+                width: 100px;
+                height: 16px;
+                display: inline-block;
+                background-image: url('/images/icon-star.svg');
+                background-repeat: space;
+            }
+        }
     }
 }
 
@@ -61,6 +71,9 @@ body {
     .review {
         background-color: $very-dark-magenta;
         border-radius: 10px;
+        img {
+            border-radius: 50%;
+        }
         h2 {
             color: $white;
         }
