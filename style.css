@@ -14,22 +14,25 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 1300px;
   height: auto;
   margin: auto;
   background-color: white;
-  padding: 3rem;
+  padding: 5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 5rem;
 }
 
 .intro h1 {
   color: #502050;
   font-size: 2.5rem;
+  font-weight: 700;
 }
 .intro p {
   color: #937b92;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 .ratings {
@@ -38,11 +41,14 @@ body {
   gap: 1rem;
 }
 .ratings .rating {
+  position: relative;
   background-color: #f7f2f7;
   border-radius: 10px;
+  width: 80%;
 }
 .ratings .rating span {
   color: #502050;
+  font-weight: 500;
 }
 .ratings .rating span::before {
   content: "";
@@ -51,6 +57,12 @@ body {
   display: inline-block;
   background-image: url("/images/icon-star.svg");
   background-repeat: space;
+}
+.ratings .rating:nth-child(2) {
+  left: 10%;
+}
+.ratings .rating:nth-child(3) {
+  left: 20%;
 }
 
 .reviews {
@@ -61,20 +73,35 @@ body {
   width: 100%;
 }
 .reviews .review {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
   background-color: #502050;
   border-radius: 10px;
+  padding: 2rem;
+  height: 80%;
+  position: relative;
 }
 .reviews .review img {
   border-radius: 50%;
 }
 .reviews .review h2 {
   color: white;
+  margin: 0;
 }
 .reviews .review h3 {
   color: #ee68a4;
+  margin: 0;
 }
 .reviews .review p {
+  grid-area: 2/1/span 1/span 2;
   color: white;
+}
+.reviews .review:nth-child(2) {
+  top: 10%;
+}
+.reviews .review:nth-child(3) {
+  top: 20%;
 }
 
 /*# sourceMappingURL=style.css.map */

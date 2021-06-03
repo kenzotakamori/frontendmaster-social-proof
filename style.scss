@@ -21,23 +21,26 @@ body {
 }
 
 .container {
-    width: 1200px;
+    width: 1300px;
     height: auto;
     margin: auto;
     background-color: $white;
-    padding: 3rem;
+    padding: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 5rem;
 }
 
 .intro {
     h1 {
         color: $very-dark-magenta;
         font-size: 2.5rem;
+        font-weight: 700;
     }
     p {
         color: $dark-gray-magenta;
+        font-weight: 500;
+        line-height: 1.5rem;
     }
 }
 
@@ -46,10 +49,13 @@ body {
     grid-auto-flow: row;
     gap: 1rem;
     .rating {
+        position: relative;
         background-color: $light-gray-magenta;
         border-radius: 10px;
+        width: 80%;
         span {
             color: $very-dark-magenta;
+            font-weight: 500;
             &::before {
                 content: '';
                 width: 100px;
@@ -58,6 +64,12 @@ body {
                 background-image: url('/images/icon-star.svg');
                 background-repeat: space;
             }
+        }
+        &:nth-child(2) {
+            left: 10%;
+        }
+        &:nth-child(3) {
+            left: 20%;
         }
     }
 }
@@ -69,19 +81,34 @@ body {
     gap: 2rem;
     width: 100%;
     .review {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
         background-color: $very-dark-magenta;
         border-radius: 10px;
+        padding: 2rem;
+        height: 80%;
+        position: relative;
         img {
             border-radius: 50%;
         }
         h2 {
             color: $white;
+            margin: 0;
         }
         h3 {
             color: $soft-pink;
+            margin: 0;
         }
         p {
+            grid-area: 2 / 1 / span 1 / span 2;
             color: $white;
+        }
+        &:nth-child(2) {
+            top: 10%;
+        }
+        &:nth-child(3) {
+            top: 20%;
         }
     }
 }
