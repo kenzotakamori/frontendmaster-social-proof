@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+$white: hsl(0, 0%, 100%);
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+$dark-gray-magenta: hsl(303, 10%, 53%);
+$light-gray-magenta: hsl(300, 24%, 96%);
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+    background-color: $light-gray-magenta;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    background-color: $white;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.intro {
+    h1 {
+        color: $very-dark-magenta;
+        font-size: 2.5rem;
+    }
+    p {
+        color: $dark-gray-magenta;
+    }
+}
+
+.ratings {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    .rating {
+        background-color: $light-gray-magenta;
+        border-radius: 10px;
+        color: $very-dark-magenta;
+    }
+}
+
+.reviews {
+    grid-area: 2 / 1 / span 1 / span 2;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+    width: 100%;
+    .review {
+        background-color: $very-dark-magenta;
+        border-radius: 10px;
+        h2 {
+            color: $white;
+        }
+        h3 {
+            color: $soft-pink;
+        }
+        p {
+            color: $white;
+        }
+    }
+}
