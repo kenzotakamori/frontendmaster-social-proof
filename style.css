@@ -45,10 +45,14 @@ body {
   background-color: #f7f2f7;
   border-radius: 10px;
   width: 80%;
+  height: 3rem;
+  display: grid;
+  place-items: center;
 }
 .ratings .rating span {
   color: #502050;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 .ratings .rating span::before {
   content: "";
@@ -88,14 +92,18 @@ body {
 .reviews .review h2 {
   color: white;
   margin: 0;
+  font-size: 1rem;
 }
 .reviews .review h3 {
   color: #ee68a4;
   margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .reviews .review p {
   grid-area: 2/1/span 1/span 2;
   color: white;
+  line-height: 1.5rem;
 }
 .reviews .review:nth-child(2) {
   top: 10%;
